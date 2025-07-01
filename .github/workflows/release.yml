@@ -6,7 +6,7 @@ permissions:
 on:
   push:
     branches: [main]
-    tags: ['v*'] # Trigger on tags like v1.0.0
+    tags: ['v*']
   pull_request:
     branches: [main]
   workflow_dispatch:
@@ -26,12 +26,25 @@ jobs:
       - name: Install system dependencies
         run: |
           sudo apt-get update
-          sudo apt-get install -y libgtk-3-dev libgles2-mesa-dev libx11-dev xorg-dev gcc
+          sudo apt-get install -y libgtk-3-dev libgles2-mesa-dev libx11-dev xorg-dev gcc libvulkan-dev
         env:
           DEBIAN_FRONTEND: noninteractive
 
       - name: Install Go dependencies
         run: |
+          go get gioui.org@v0.8.0
+          go get gioui.org/app@v0.8.0
+          go get gioui.org/layout@v0.8.0
+          go get gioui.org/op@v0.8.0
+          go get gioui.org/op/clip@v0.8.0
+          go get gioui.org/op/paint@v0.8.0
+          go get gioui.org/text@v0.8.0
+          go get gioui.org/unit@v0.8.0
+          go get gioui.org/widget@v0.8.0
+          go get gioui.org/widget/material@v0.8.0
+          go get github.com/PuerkitoBio/goquery@v1.8.1
+          go get github.com/google/uuid@v1.6.0
+          go get github.com/ncruces/zenity@v0.10.0
           go mod tidy
 
       - name: Install UPX
