@@ -35,19 +35,6 @@ A lightweight GUI application built with [Gio](https://gioui.org) to parse and e
 
 3. **Install Dependencies**:
    ```bash
-   go get gioui.org@v0.5.0
-   go get gioui.org/app@v0.5.0
-   go get gioui.org/layout@v0.5.0
-   go get gioui.org/op@v0.5.0
-   go get gioui.org/op/clip@v0.5.0
-   go get gioui.org/op/paint@v0.5.0
-   go get gioui.org/text@v0.5.0
-   go get gioui.org/unit@v0.5.0
-   go get gioui.org/widget@v0.5.0
-   go get gioui.org/widget/material@v0.5.0
-   go get github.com/PuerkitoBio/goquery@v1.8.1
-   go get github.com/google/uuid@v1.6.0
-   go get github.com/ncruces/zenity@v0.10.0
    go mod tidy
    ```
 
