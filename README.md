@@ -45,7 +45,7 @@ A lightweight GUI application built with [Gio](https://gioui.org) to parse and e
 1. **Install System Dependencies**:
    ```bash
    sudo apt-get update
-   sudo apt-get install -y libgtk-3-dev libgles2-mesa-dev libx11-dev xorg-dev gcc
+   sudo apt-get install -y gcc pkg-config libwayland-dev libx11-dev libx11-xcb-dev libxkbcommon-x11-dev libgles2-mesa-dev libegl1-mesa-dev libffi-dev libxcursor-dev libvulkan-dev
    ```
 
 2. **Build the Executable**:
